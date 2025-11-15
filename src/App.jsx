@@ -9,6 +9,7 @@ import Feed from "./components/Feed";
 import Profile from "./components/Profile";
 import Connections from "./components/Connections";
 import Requests from "./components/Requests";
+import Chat from "./components/Chat";
 
 
 function App() {

@@ -5,6 +5,7 @@ import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { addConnections } from '../utils/connectionSlice'
 import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 const Connections = () => {
     const connections = useSelector((store) => store.connections)
@@ -42,7 +43,13 @@ const Connections = () => {
                             {age && gender && <p>{age + ", " + gender}</p>}
                             <p>{about}</p>
                         </div>
-                        <Link to={"/chat/" + _id}> <button className="btn btn-primary">Chat</button></Link>
+                        <Link to={"/chat/" + _id}>
+
+                            <button className="mt-5 ml-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold text-lg px-6 py-3 rounded-xl shadow-md hover:shadow-lg transition-transform transform hover:scale-105">
+                                💬 Chat
+                            </button>
+
+                        </Link>
                     </div>
                 )
             })}
